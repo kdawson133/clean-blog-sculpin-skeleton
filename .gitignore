@@ -1,0 +1,7 @@
+.DS_Store
+.sculpin
+bower_components
+node_modules
+source/components
+output_dev
+output_prod
