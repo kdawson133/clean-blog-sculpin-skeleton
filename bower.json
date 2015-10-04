@@ -1,0 +1,28 @@
+{
+  "name": "sculpin-skeleton",
+  "version": "0.0.1",
+  "homepage": "https://github.com/kdawson133/sculpin-skeleton",
+  "authors": [
+    "kdawson133 <kdawson133@gmail.com>"
+  ],
+  "description": "bootstrap 3 sculpin blog skeleton",
+  "main": "README.md",
+  "moduleType": [],
+  "keywords": [
+    "blog"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0",
+    "highlightjs": "~8.8.0"
+  }
+}
