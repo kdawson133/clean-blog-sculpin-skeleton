@@ -1,0 +1,29 @@
+{
+  "name": "sculpin-skeleton",
+  "version": "0.0.1",
+  "description": "bootstrap 3 sculpin blog skeleton",
+  "main": "README.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kdawson133/sculpin-skeleton.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "kdawson133@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kdawson133/sculpin-skeleton/issues"
+  },
+  "homepage": "https://github.com/kdawson133/sculpin-skeleton",
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-bower": "0.0.10",
+    "gulp-notify": "^2.2.0",
+    "gulp-shell": "^0.4.3"
+  }
+}
