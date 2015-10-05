@@ -86,7 +86,7 @@ gulp.task('copyuser', function () {
       .pipe(notify("Found file: <%= file.relative %>!"));
 });
 gulp.task('minify', function () {
-    gulp.src('user_assets/css/*.css')
+    gulp.src('user_assets/css/extra.css')
       .pipe(cssmin())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest('user_assets/css'));
