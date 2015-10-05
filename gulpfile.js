@@ -3,6 +3,8 @@ var gulp    = require("gulp"),
     del     = require("del");
     bower   = require("gulp-bower");
     shell   = require("gulp-shell");
+    cssmin  = require('gulp-cssmin');
+    rename  = require('gulp-rename');
 /**
  * Copy any needed files.
  *
@@ -17,6 +19,7 @@ var config = {
 gulp.task("clean", function () {
   return del([
     'source/components',
+    'source/assets',
     'output_dev',
     'output_prod'
   ]);
@@ -24,7 +27,7 @@ gulp.task("clean", function () {
 gulp.task('bower', function () {
   return bower({ cmd: 'update'});
 });
-gulp.task("copyfiles", function () {
+gulp.task("copybower", function () {
     // jquery
     gulp.src("bower_components/jquery/dist/*.min.js")
       .pipe(gulp.dest("source/components/js"))
@@ -68,6 +71,26 @@ gulp.task("copyfiles", function () {
       .pipe(gulp.dest("source/components/css"))
       .pipe(notify("Found file: <%= file.relative %>!"));
 });
+gulp.task('copyuser', function () {
+    // user css
+    gulp.src("user_assets/css/*.min.css")
+      .pipe(gulp.dest("source/assets/css"))
+      .pipe(notify("Found file: <%= file.relative %>!"));
+    // user img
+    gulp.src("user_assets/img/*.*")
+      .pipe(gulp.dest("source/assets/img"))
+      .pipe(notify("Found file: <%= file.relative %>!"));
+    // user icons
+    gulp.src("user_assets/icons/*.*")
+      .pipe(gulp.dest("source/assets/icons"))
+      .pipe(notify("Found file: <%= file.relative %>!"));
+});
+gulp.task('minify', function () {
+    gulp.src('user_assets/css/*.css')
+      .pipe(cssmin())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest('user_assets/css'));
+});
 gulp.task('dev', shell.task([
   'sculpin generate --watch --server'
 ]));
@@ -75,4 +98,4 @@ gulp.task('pro', shell.task([
   'sculpin generate --env=prod'
 ]));
 
-gulp.task('default', ['copyfiles']);
+gulp.task('default', ['copybower', 'copyuser']);
