@@ -29,6 +29,16 @@ gulp.task("copyfiles", function () {
     gulp.src("bower_components/jquery/dist/*.min.js")
       .pipe(gulp.dest("source/components/js"))
       .pipe(notify("Found file: <%= file.relative %>!"));
+    gulp.src("bower_components/jquery/dist/*.min.map")
+      .pipe(gulp.dest("source/components/js"))
+      .pipe(notify("Found file: <%= file.relative %>!"));
+    // clean-blog
+    gulp.src("bower_components/clean-blog/css/clean-blog.min.css")
+      .pipe(gulp.dest("source/components/css"))
+      .pipe(notify("Found file: <%= file.relative %>!"));
+    gulp.src("bower_components/clean-blog/js/clean-blog.min.js")
+      .pipe(gulp.dest("source/components/js"))
+      .pipe(notify("Found file: <%= file.relative %>!"));
     // bootstrap css
     gulp.src("bower_components/bootstrap/dist/css/*.min.css")
       .pipe(gulp.dest("source/components/css"))
