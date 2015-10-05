@@ -1,0 +1,18 @@
+---
+layout: page
+title: Categories
+header: /assets/img/catagory.jpg
+use:
+    - posts_categories
+---
+
+  <div class="categories">
+    {% for category,posts in data.posts_categories|sort %}
+        <a href="{{ site.url }}/archive/categories/{{ category|url_encode(true) }}">
+          <span class="label label-primary">
+            <i class="fa fa-folder-open"></i>
+            {{ category|title }}
+          </span>
+        </a><br />
+    {% endfor %}
+  </div>
