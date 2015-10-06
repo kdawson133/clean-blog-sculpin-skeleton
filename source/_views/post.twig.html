@@ -54,12 +54,12 @@
               <ul class="pager">
 {% if page.previous_post %}
                 <li class="previous">
-                  <a href="{{ site.url }}{{ page.previous_post.url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous_post.title}}">&larr; Previous Post</a>
+                  <a href="{{ site.url }}{{ page.previous_post.url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous_post.title}}"><i class="fa fa-arrow-left"></i>&nbsp;&nbsp;Previous Post</a>
                 </li>
 {% endif %}
 {% if page.next_post %}
                 <li class="next">
-                  <a href="{{ site.url }}{{ page.next_post.url }}" data-toggle="tooltip" data-placement="top" title="{{page.next_post.title}}">Next Post &rarr;</a>
+                  <a href="{{ site.url }}{{ page.next_post.url }}" data-toggle="tooltip" data-placement="top" title="{{page.next_post.title}}">Next Post&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
                 </li>
 {% endif %}
               </ul>
