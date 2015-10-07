@@ -1,3 +1,3 @@
 # Sculpin-Skeleton
 
-A clean-blog (bootstrap 3) blog skeleton for [Sculpin](https://sculpin.io).
+A clean-blog (custom bootstrap 3) blog skeleton for [Sculpin](https://sculpin.io).
