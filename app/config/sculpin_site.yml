@@ -1,11 +1,10 @@
 # The contents of this file are parsed and made available as
 # via `site.*`. So for example, {{ site.title }} can be used
 # in a template to get the contents of the `title` key.
-title: IZNEWS
-subtitle: Musings of a Frustrated Web Developer.
-header: /assets/img/header.jpg
+title: ISKIRK.NET
+subtitle: Astronomy for the Average Human.
+header: /assets/img/rt.jpg
 
-twitter: @kirk133
+twitter: kirk133
 github: kdawson133
 googleplus: 110158376341784696295
-disqus: iznewstoday

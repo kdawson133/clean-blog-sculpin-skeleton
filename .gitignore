@@ -1,8 +1,7 @@
+/source/assets/css/extra.min.css
 .DS_Store
-.sculpin
-bower_components
-node_modules
+components
 source/components
-source/assets
+node_modules
 output_dev
 output_prod
